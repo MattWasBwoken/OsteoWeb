@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="it">
+    <head>
+        <meta charset="utf-8" />
+        <title>Prenotazione effettuata - Samuele Masiero</title>
+        <link rel="icon" type="image/x-icon" href="./../images/favicon.png" />
+        <meta name="description" content="Questa pagina e` dedicata alla prenotazione degli appuntamenti con l'osteopata Samuele Masiero." />
+        <meta name="keywords" content="Osteopata,Samuele Masiero,Prenotazione,Appuntamenti" />
+        <meta name="author" content="Gruppo OsteoWeb" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./../styles/style.css" media="screen" />
+        <link rel="stylesheet" href="./../styles/tablet.css" media="screen and (max-width:1200px)" />
+        <link rel="stylesheet" href="./../styles/mini.css" media="screen and (max-width:768px)" />
+        <link rel="stylesheet" href="./../styles/print.css" media="print" />
+        
+        <script src="./../js/registrazione.js"></script>
+    </head>
+  
+    <body id="confermaPrenotazione">
+        <header>
+            <nav aria-label="aiuti alla navigazione" class="listHelp">
+                <ul>
+                    <li><a href="#content" class="navigationHelp">Vai al contenuto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1>Osteopata Samuele Masiero</h1>
+                <button id="hamburgerBtn" aria-label="Apri/Chiudi menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="menu" aria-label="Menu di navigazione">
+                    <ul>
+                    <li><a href="#content" class="navigationHelp">Salta menu di navigazione</a></li>
+                    <li><a href="./../php/prenotazione.php" class="pulsantemenu">Prenota</a></li>
+                    <li><a href="./../index.php" lang="en" xml:lang="en">Home</a></li> 
+                    <li><a href="about.html">Chi Sono</a></li>
+                    <li><a href="sedi.html">Sedi</a></li>
+                    <li><a href="./../php/news.php" lang="en" xml:lang="en">News</a></li>
+                    <li><a href="./../php/accesso.php" class="pulsantemenu" lang="en" xml:lang="en">Account</a></li>
+                    </ul>
+                </nav>       
+            </div>
+            <nav id="burger-menu" aria-label="Menù a tendina" tabindex="-1">
+                <a href="#content" class="navigationHelp">Salta menu di navigazione</a>
+                <a href="./../php/prenotazione.php" class="pulsantemenu">Prenota</a>
+                <a href="./../index.php" lang="en" xml:lang="en">Home</a>
+                <a href="about.html">Chi Sono</a>
+                <a href="sedi.html">Sedi</a>
+                <a href="./../php/news.php" lang="en" xml:lang="en">News</a>
+                <a href="./../php/accesso.php" class="pulsantemenu" lang="en" xml:lang="en">Account</a>
+            </nav>
+            <nav id="breadcrumb" aria-label="Breadcrumb">
+                <p>Ti trovi in: <a href="./../index.php" lang="en" xml:lang="en">Home</a> &#8594; Prenotazione</p>
+            </nav>
+        </header>
+
+        <main id="content">
+            <h2>Prenotazione Effettuata</h2>
+            <p>Perfetto! La tua prenotazione è andata a buon fine, ora non ti resta che aspettare la mia conferma! &#128512;</p>
+            <p>Se vuoi controllare lo stato della prenotazione vai nella sezione <a href="./../php/dashboard.php" lang="en" xml:lang="en">Account</a></p>
+            <p>Se invece vuoi continuare la navigazione torna alla <a href="./../index.php" lang="en" xml:lang="en">Home</a></p>
+            <section id="account">{account}</section>
+        </main>
+
+
+        <footer>
+            <div class="colonne">
+                <div>
+                    <p>Contatti:</p>
+                    <ul aria-label="Contatti">
+                    <li><span lang="en" xml:lang="en">Email</span>: <a href="mailto:samuele@masiero.com">samuele@masiero.com</a></li>
+                    <li>Telefono: <a href="tel:+123456789">+123456789</a></li>
+                    </ul>
+                </div>
+                <div class="logo"></div>
+                <div>
+                    <p lang="en" xml:lang="en">Social:</p>
+                    <ul aria-label="Social">
+                    <li><a href="https://www.facebook.com/samuele.masiero.7" lang="en" xml:lang="en">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/samuele_masiero_osteopata/" lang="en" xml:lang="en">Instagram</a></li>
+                    <li><a href="https://linked.in" lang="en" xml:lang="en">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img class="imgValidCode" src="./../images/valid-xhtml10.png" alt="HTML valido"/>
+            <p>
+                Samuele Masiero - <span lang="en" xml:lang="en">All rights Reserved</span> - Leggi i <a href="../html/condizioni.html">Termini e Condizioni</a>
+            </p>
+            <img class="imgValidCode" src="./../images/vcss-blue.gif" alt="CSS valido"/>
+        </footer>
+
+        <script src="./../js/hamburger.js" defer></script>
+        <script src="./../js/backtotop.js" defer></script>
+        <a href="#content" id="backToTop" aria-label="Torna su">
+            <span class="arrow-up"></span>
+        </a>
+
+    </body>
+
+</html>
+
+

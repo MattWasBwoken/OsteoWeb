@@ -1,0 +1,10 @@
+#system file
+.DS_Store
+#configuration file
+.idea/
+.vscode/
+#relazione
+Relazione/*
+!Relazione/immagini/
+!Relazione/*.tex
+!Relazione/*.pdf

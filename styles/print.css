@@ -1,0 +1,462 @@
+*{
+    padding: 0em;
+    margin: 0em;
+}
+
+:root {
+    --linkcolor: #0057AD;
+    --bordercolor:  #606060;
+}
+
+/* ----------------------------------------------------------
+   |                          HTML                          |
+   ----------------------------------------------------------
+*/
+
+html {
+    font-family: "Times New Roman", serif;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+a {
+    color: var(--linkcolor);
+    text-decoration: underline;
+}
+
+a:not(#breadcrumb a)::after{
+    content: " (" attr(href) ") ";
+}
+
+a[href="#content"] {
+    display: none !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    margin: auto;
+}
+
+/* ----------------------------------------------------------
+   |                         HEADER                         |
+   ----------------------------------------------------------
+*/
+
+header {
+    padding: 1em 0 1em 0;
+    margin: 0.5em 0;
+}
+
+header h1{
+    content: url(./../images/sm_logotipo.svg);
+    width: 30%;
+    margin: 0 auto;
+}
+
+nav:not(#breadcrumb){ 
+    display: none;
+}
+
+#backToTop {
+    display: none;
+}
+
+#breadcrumb {
+    padding: 0.5em 0 0.5em 0;
+    border-top: 1px solid var(--bordercolor);
+    border-bottom: 1px solid var(--bordercolor);
+    text-align: left;
+    margin-top: 1em;
+}
+
+#breadcrumb p {
+    margin-left: 2em;
+}
+
+#hamburgerBtn {
+    display: none;
+}
+
+/* ----------------------------------------------------------
+   |                         FOOTER                         |
+   ----------------------------------------------------------
+*/
+
+footer {
+    font-style: italic;
+    border-top: 1px solid var(--bordercolor);
+    padding: 1em;
+    width: 100%;
+} 
+
+.imgValidCode{
+    display: none;
+}
+
+.colonne {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.logo img {
+    display: none; 
+}
+
+.colonne div {
+    margin: 0.2em;
+}
+
+.colonne p {
+    font-weight: bold;
+}
+
+.colonne ul li {
+    margin: 0.5em;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* ----------------------------------------------------------
+   |                          MAIN                          |
+   ----------------------------------------------------------
+*/
+
+#homepage h2, #about h2, #account h2, #prenotazione h2, #sedi h2, #paginaNews h2, #condizioni h2, #dashboard h2, #confermaPrenotazione h2, #confermaNews h2, #notAuthorized h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+}
+
+main {
+    margin-bottom: 1em;
+}
+
+/*home*/
+
+#introHomepage{
+    margin-bottom: 2em;
+}
+
+#punti-di-forza h3, h4{
+        text-align: center;
+        margin-bottom: 0.5em;
+}
+
+#punti-di-forza article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2em 0em;
+    border-top: 1px solid var(--bordercolor);
+}
+
+article:last-of-type {
+    border-bottom: 1px solid var(--bordercolor);
+}
+
+#punti-di-forza img, .boxNews img, .notizia img  {
+    display: none;
+}
+
+#news {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/*about*/
+
+#about h3{
+    margin: 1em;
+    text-align: center;
+}
+
+.biografia img {
+    display: none;
+}
+
+.biografia p {
+    margin-bottom: 1em;
+}
+
+.timeline li::before {
+    content: attr(data-time) " - " attr(data-text);
+    display: block;
+    margin-bottom: 3em;
+}
+
+/*sedi*/
+
+.immaginisedi {
+    display:none;
+}
+
+.containersedi {
+    display: flex;
+    flex-direction: row;
+    margin: 2em 0em;
+}
+
+.containersedi > div {
+    flex: 1; 
+    padding: 1em; 
+}
+
+.sede {
+    margin: 1em;
+    border: 1px solid var(--bordercolor);
+}
+
+.sede iframe {    
+    display:none;
+}
+
+.sede h3 {
+    margin-bottom: 0.5em;
+}
+
+.sede p {
+    margin: 0.5em 0;
+}
+
+.sede ul li {
+    text-align: left;
+}
+
+/*errore 404 e 500*/
+
+#error-message {
+    margin: 6em;
+}
+
+#error-message h2 { 
+    text-align:center; 
+    line-height: 2em;
+}
+
+#error-message p { 
+    text-align:center;
+    margin: 2em;
+}
+
+#error-message img {
+    display:none;
+}
+
+/*accesso*/
+
+#account > main > div {
+    visibility: hidden;
+}
+#account > main > div:not(.hidden) {
+    visibility: visible;
+}
+#account > main > div:not(.hidden) ~ div:not(.hidden) {
+    visibility: hidden;
+}
+.step {
+    display: none;
+}
+
+#login, #registrazione {
+    width: 50%;
+    min-width: 20em;
+    margin: 3em auto;
+    padding: 1.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+#login h3, #registrazione h3 {
+    font-size: 1.7em;
+    padding: 0.2em 0em;
+}
+#login legend, #registrazione legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    padding: 0 0.5em;
+}
+
+#login form fieldset, #registrazione form fieldset {
+    width: 60%;
+    min-width: 16em;
+    margin: 1em auto 1.5em;
+    padding: 1em 2em 0em;
+    border-radius: 0.5em;
+}
+
+#login form input, #registrazione form input {
+    width: 90%;
+    padding: 0.8em;
+    margin: 0.3em auto 1.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+}
+
+#login form, #registrazione form {
+    text-align: center;
+}
+#login form label, #registrazione form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+#login input[type="submit"], #registrazione input[type="submit"] {
+    width: auto;
+    padding: 0.6em 1.5em;
+    margin: 1em 0.5em 1.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#go_reg, #go_log {
+    color: var(--linkcolor);
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    display: none;
+}
+
+/*condizioni*/
+#condizioni h3{
+    padding: 0.5em 0em;
+}
+
+/*prenotazione*/
+
+#prenotazione main>p{
+    text-align: center;
+}
+
+#prenotazioneForm {
+    width: 50%;
+    min-width: 30em;
+    margin: 2em auto;
+    padding: 2em 2em 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--bordercolor);
+}
+
+#prenotazioneForm fieldset {
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+}
+
+#prenotazioneForm legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    padding: 0 0.5em;
+}
+
+#prenotazioneForm ul li {
+    margin: 0 auto;
+}
+
+#prenotazioneForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.3em;
+    margin-left: 4%;
+}
+
+#prenotazioneForm input, #prenotazioneForm textarea {
+    display: block;
+    width: 90%;
+    margin: 0.1em auto 1em;
+    padding: 0.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+}
+
+#prenotazioneForm select {
+    display: block;
+    background-color: var(--bgcolor);
+    width: 92.5%;
+    margin: 0.1em auto 1em;
+    padding: 0.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+}
+
+#prenotazioneForm input::placeholder, #prenotazioneForm textarea::placeholder {
+    color: var(--bordercolor);
+}
+
+#prenotazioneForm textarea {
+    height: 7em;
+    resize: vertical;
+}
+
+#prenotazioneForm #orari {
+    margin: 0.5em 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+    gap: 1em;
+}
+#prenotazioneForm #orari button {
+    background-color: var(--buttoncolor);
+    font-weight: normal;
+    padding: 0.3em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+#prenotazioneForm #orari .selected{
+    padding: 0.25em;
+    font-weight: bold;
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+    border: 2px solid var(--bordercolor);
+    cursor: default;
+}
+
+.requiredField::after {
+    content: " *";
+}
+
+.optionalField::after {
+    font-weight: lighter;
+    font-style: italic;
+    content: " (facoltativo)";
+    font-size: 0.8em;
+}
+
+#prenotazioneForm input[type="submit"] {
+    width: auto;
+    padding: 0.6em 1.5em;
+    margin: 1em auto 0.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#prenotazioneForm>p {
+    text-align: center;
+}
+
+#sedeHint{
+    display: none;
+}

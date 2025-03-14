@@ -1,0 +1,262 @@
+main {
+    padding: 1em;
+}
+
+#backToTop:hover {
+    background-color: #b8d3f4;
+}
+
+#hamburgerBtn {
+    display: block; 
+    width: 3.5em;
+    height: 3.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1.5em;
+}
+
+#hamburgerBtn.openedMenu {
+    background-image: url(./../images/openedMenu.png);
+    background-size: contain;
+}
+
+#hamburgerBtn.closedMenu {
+    background-image: url(./../images/closedMenu.png);
+    background-size: contain;
+}
+
+#menu{
+    display: none;
+}
+#burger-menu .navigationHelp {
+    margin: -3em;
+}
+#burger-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+#burger-menu a {
+    display: block;
+    font-size: 2em;
+    text-decoration-thickness: 10%;
+    text-align: center;
+    margin: 0.5em 0;
+    padding: 0.5em;
+}
+#burger-menu .currentpage {
+    font-size: 2em;
+    margin: 0.5em 0;
+    padding: 0.5em;
+}
+#burger-menu a:link{
+    color: var(--linkcolor);
+}
+#burger-menu a:visited{
+    color: var(--visitedcolor);
+}
+
+/*--------------HEADER--------------*/
+
+#breadcrumb{
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 0.9em;
+}
+/*--------------FOOTER--------------*/
+
+footer>p {
+    display: inline;
+    font-size: 0.8em;
+}
+
+.imgValidCode{
+    width: 5em;
+}
+
+/*--------------HOMEPAGE--------------*/
+
+#content h2 {
+    line-height: 1em;
+    margin: 0.5em;
+    text-align: center;
+}
+
+#introHomepage {
+    margin: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+#punti-di-forza h3 {
+    font-size: 1.8em;
+    margin: 0.2em;
+    text-align: center;
+}
+#punti-di-forza h4 {
+    font-size: 1.8em;
+    margin: 0.5em;
+    text-align: center;
+}
+
+#punti-di-forza p {
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+#news{
+    margin-top: 5em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.boxNews {
+    width: 100%;
+    border: 1px solid var(--bordercolor);
+}
+
+.boxNews img{
+    max-width: 50%;
+}
+
+.boxNews h3 {
+    font-size: 1.3em;
+}
+
+.boxNews p{
+    text-align: center;
+}
+
+/*--------------PRENOTAZIONE--------------*/
+
+#prenotazione h2{
+    padding: 0;
+}
+
+#prenotazione main>p {
+    margin: 1.5em;
+}
+
+#prenotazioneForm select {
+    width: 88%;
+}
+
+#prenotazioneForm input{
+    width: 85%;
+}
+
+
+/*--------------SEDI--------------*/
+#sedi #content>p{
+    text-align: left;
+}
+
+#sedi .sede p{
+    text-align: center;
+    margin: 0.5em;
+}
+
+.immaginisedi{
+    justify-content: center;
+}
+
+.containersedi{
+    margin: 1em 5em;
+}
+
+.immaginisedi img {
+    width: 40%;
+    height: 40%;
+}
+
+/*--------------LOGIN--------------*/
+
+.buller::before, .buller::after{
+    width: 50%;
+}
+
+/*--------------ABOUT--------------*/
+
+.biografia {
+    align-items:flex-start;
+}
+
+.biografia p{
+    text-align: left;
+}
+
+#about img {
+    margin-right: 1em;
+    max-width: 300px;
+}
+#timeline{
+    margin: 2em;
+}
+
+.timeline{
+    height: 95%;
+    width: 95%;
+}
+
+.timeline li:nth-child(even):after{
+    font-size: 1em;
+    line-height: 1em;
+}
+.timeline li:nth-child(odd):after{
+    font-size: 1em;
+    line-height: 1em;
+}
+
+
+/*--------------NEWS--------------*/
+
+.notizia h3{
+    text-align: left;
+    line-height: 1em;
+}
+
+/*--------------404/500--------------*/
+
+#error-message h2{
+    margin: 0;
+}
+
+/*--------------CONDIZIONI--------------*/
+
+#condizioni #content h2{
+    font-size: 1.8em;
+}
+
+#condizioni #content h3{
+
+    margin: 0.2em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+#condizioni #content p{
+    padding: 0.8em;
+    text-align: left;
+}
+
+/*--------------NOT_AUTHORIZED--------------*/
+#not-authorized #content p{
+    text-align: center;
+    margin: 2em 2em auto 2em;
+}
+
+/*--------------CONFERMA_PRENOTAZIONE--------------*/
+
+#confermaPrenotazione #content p{
+    margin: 1em;
+}
+
+/*--------------CONFERMA_INSERIMENTO_NEWS--------------*/
+
+#confermaNews #content p{
+    margin: 1em;
+}

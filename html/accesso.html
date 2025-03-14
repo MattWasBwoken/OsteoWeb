@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="it">
+    <head>
+        <meta charset="utf-8" />
+        <title>Accesso - Samuele Masiero</title>
+        <link rel="icon" type="image/x-icon" href="..//images/favicon.png" />
+        <meta name="description" content="Questa pagina è dedicata alla gestione del tuo account per il sito dell'osteopata Samuele Masiero. Puoi effettuare una registrazione o un accesso per prenotare il tuo appuntamento." />
+        <meta name="keywords" content="Osteopata,Samuele Masiero,Account,Registrazione,Accesso">
+        <meta name="author" content="Gruppo OsteoWeb" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./../styles/style.css" media="screen" />
+        <link rel="stylesheet" href="./../styles/tablet.css" media="screen and (max-width:1200px)" />
+        <link rel="stylesheet" href="./../styles/mini.css" media="screen and (max-width:768px)" />
+        <link rel="stylesheet" href="./../styles/print.css" media="print" />
+        <script src="./../js/access.js"></script>
+    </head>
+
+    <body id="account">
+        <header>
+            <nav aria-label="aiuti alla navigazione" class="listHelp">
+                <ul>
+                    <li><a href="#content" class="navigationHelp">Vai al contenuto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1>Osteopata Samuele Masiero</h1>
+                <button id="hamburgerBtn" aria-label="Apri/Chiudi menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="menu" aria-label="Menu di navigazione">
+                    <ul>
+                        <li><a href="#content" class="navigationHelp">Salta menu di navigazione</a></li>
+                        <li><a href="./../php/prenotazione.php" class="pulsantemenu">Prenota</a></li>
+                        <li><a href="./../index.php" lang="en" xml:lang="en">Home</a></li> 
+                        <li><a href="./../html/about.html">Chi Sono</a></li>
+                        <li><a href="./../html/sedi.html">Sedi</a></li>
+                        <li><a href="./../php/news.php" lang="en" xml:lang="en">News</a></li>
+                        <li class="currentpage" lang="en" xml:lang="en">Account</li>
+                    </ul>
+                </nav>       
+            </div>
+            <nav id="burger-menu" aria-label="Menù a tendina" tabindex="-1">
+                <a href="#content" class="navigationHelp">Salta menu di navigazione</a>
+                <a href="./../php/prenotazione.php" class="pulsantemenu">Prenota</a>
+                <a href="./../index.php" lang="en" xml:lang="en">Home</a>
+                <a href="./../html/about.html">Chi Sono</a>
+                <a href="./../html/sedi.html">Sedi</a>
+                <a href="./../php/news.php" lang="en" xml:lang="en">News</a>
+                <span class="currentpage" lang="en" xml:lang="en">Account</span>
+            </nav>
+            <nav id="breadcrumb" aria-label="Breadcrumb">
+                <p>Ti trovi in: <a href="./../index.php" lang="en" xml:lang="en">Home</a> &#8594; <span lang="en" xml:lang="en">Account</span></p>
+            </nav>
+        </header>
+
+        <main id="content">
+            <h2>Accedi o Registrati per iniziare!</h2>
+            <div id="login">
+                <h3>Accedi</h3>
+                <form action="./../php/accesso.php" method="post">
+                    <fieldset>
+                        <legend>Credenziali</legend>
+                        <label for="username_l" lang="en" xml:lang="en">Username</label>
+                        <input type="text" id="username_l" name="username_l" required="required">
+                        <p id="username_error_l" class="error hidden" aria-live="polite">{UserErrorL}</p>
+
+                        <label for="password_l" lang="en" xml:lang="en">Password</label>
+                        <input type="password" id="password_l" name="password_l" required="required">
+                        <p id="password_error_l" class="error hidden" aria-live="polite">{PswErrorL}</p>
+
+                        <input type="submit" id="submit_l" name="submit_l" value="Accedi" aria-label="Accedi">
+                    </fieldset>
+                </form>
+                <p>Non hai un <span lang="en" xml:lang="en">account</span>? <strong id="go_reg" tabindex="0">Registrati</strong></p>
+            </div>
+            <div id="registrazione">
+                <h3>Registrati</h3>
+                <form action="./../php/accesso.php" method="post">
+                    <fieldset>
+                        <legend>Generalità</legend>
+                        <label for="nome" class="requiredField">Nome</label>
+                        <input type="text" id="nome" name="nome" required="required">
+                        <p class="error" id="nome_error" aria-live="polite">{NomeError}</p>
+                        
+                        <label for="cognome" class="requiredField">Cognome</label>
+                        <input type="text" id="cognome" name="cognome" required="required">
+                        <p class="error" id="cognome_error" aria-live="polite">{CognomeError}</p>
+
+                        <label for="CF" class="requiredField">Codice Fiscale</label>
+                        <input type="text" id="CF" name="CF" required="required">
+                        <p class="error" id="cf_error" aria-live="polite">{CFError}</p>
+
+                        <label for="dataNascita" class="requiredField">Data di nascita</label>
+                        <input type="date" id="dataNascita" name="dataNascita" required="required">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contatti</legend>
+                        <label for="mail" lang="en" xml:lang="en" class="requiredField">E-mail</label>
+                        <input type="email" id="mail" name="mail" required="required">
+                        <p id="mail_error" class="error" aria-live="polite">{MailError}</p>
+
+                        <label for="phone" class="requiredField">Numero di telefono</label>
+                        <input type="tel" id="phone" name="phone" required="required">
+                        <p id="phone_error" class="error" aria-live="polite">{PhoneError}</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dati di accesso</legend>
+                        <label for="username_r" class="requiredField" lang="en" xml:lang="en">Username</label>
+                        <input type="text" id="username_r" name="username_r" required="required">
+                        <p id="username_error_r" class="error hidden" aria-live="polite">{UserErrorR}</p>
+
+                        <label for="password_r" class="requiredField" lang="en" xml:lang="en">Password</label>
+                        <input type="password" id="password_r" name="password_r" required="required">
+                        <p id="password_error_r" class="error hidden" aria-live="polite">{PswErrorR}</p>
+
+                        <input type="submit" id="submit_r" name="submit_r" value="Registrati" aria-label="Registrati">
+                    </fieldset>
+                <p>I campi indicati con<span class="requiredField"></span> sono obbligatori.</p>
+                <p>Hai già un <span lang="en" xml:lang="en">account</span>? <strong id="go_log" tabindex="0">Accedi</strong></p>
+            </form>
+            </div>
+            <p class="error" id="login_error" aria-live="polite">{LoginError}</p>
+        </main>
+
+
+        <footer>
+            <div class="colonne">
+                <div>
+                    <p>Contatti:</p>
+                    <ul aria-label="Contatti">
+                    <li><span lang="en" xml:lang="en">Email</span>: <a href="mailto:samuele@masiero.com">samuele@masiero.com</a></li>
+                    <li>Telefono: <a href="tel:+123456789">+123456789</a></li>
+                    </ul>
+                </div>
+                <div class="logo"></div>
+                <div>
+                    <p lang="en" xml:lang="en">Social:</p>
+                    <ul aria-label="Social">
+                    <li><a href="https://www.facebook.com/samuele.masiero.7" lang="en" xml:lang="en">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/samuele_masiero_osteopata/" lang="en" xml:lang="en">Instagram</a></li>
+                    <li><a href="https://linked.in" lang="en" xml:lang="en">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img class="imgValidCode" src="./../images/valid-xhtml10.png" alt="HTML valido"/>
+            <p>
+                Samuele Masiero - <span lang="en" xml:lang="en">All rights Reserved</span> - Leggi i <a href="../html/condizioni.html">Termini e Condizioni</a>
+            </p>
+            <img class="imgValidCode" src="./../images/vcss-blue.gif" alt="CSS valido"/>
+        </footer>
+
+        <script src="./../js/hamburger.js" defer></script>
+        <script src="./../js/backtotop.js" defer></script>
+        <a href="#content" id="backToTop" aria-label="Torna su">
+            <span class="arrow-up"></span>
+        </a>
+    </body>
+
+</html>

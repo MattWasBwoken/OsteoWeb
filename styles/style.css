@@ -1,0 +1,1013 @@
+*{
+    padding: 0em;
+    margin: 0em;
+}
+
+:root{
+    --maincolor: #0057AD;
+    --txtcolor: #000;
+    --buttoncolor: #b8d3f4;
+    --bgcolor: #FFF;
+    --breadcolor: #FFF;
+    --bordercolor:  #606060;
+    --linkcolor: #000;
+    --visitedcolor: #3F6DEE;
+}
+
+html, body{
+    color: var(--txtcolor);
+    background-color: var(--maincolor);
+}
+
+body{
+    font-size: 100%;
+    font-family: "Montserrat", "Roboto", sans-serif;
+    line-height: 1.5em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    color: var(--linkcolor); 
+}
+a:visited {
+    color: var(--visitedcolor);
+}
+
+/* AIUTI ALLA NAVIGAZIONE */
+
+.navigationHelp{
+    position: absolute;
+    text-indent: -999em;
+    color: var(--linkcolor);
+}
+
+.navigationHelp:focus{
+    text-indent: 0;
+}
+
+.listHelp li {
+    list-style-type: none;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.2em;
+    width: 3.5em;
+    height: 3.5em;
+    background-color: var(--buttoncolor);
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+}
+
+#backToTop .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 0.66em solid transparent;
+    border-right: 0.66em solid transparent;
+    border-bottom: 1em solid var(--txtcolor);
+}
+
+#content:target{
+    padding-top: 13em;
+    margin-top: -13em;
+}
+
+/* SEZIONE HEADER */
+
+header{
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column; 
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 999;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+}
+
+header h1{
+    width: 2.4em;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 3em;
+    background-image: url(./../images/sm_logotipo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+
+/* SEZIONE MENU */
+
+#burger-menu, #hamburgerBtn {
+    display: none;
+}
+
+#menu{
+    display: flex;
+    padding: 0.5em;
+    font-size: 1.5em;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+#menu a:link{
+    color: var(--linkcolor);
+}
+#menu a:visited{
+    color: var(--visitedcolor);
+}
+#menu>ul{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding: 1em;
+    gap: 1em;
+}
+#menu>ul>li{
+    color: var(--txtcolor);
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+}
+#menu>ul>li>a {
+    color: var(--linkcolor);
+    text-decoration: underline;
+    text-decoration-thickness: 10%;
+    padding: 6px 10px 9px 10px;
+}
+
+#menu>ul>li .pulsantemenu{
+    text-decoration: none;
+}
+.pulsantemenu{
+    background-color: var(--bgcolor);
+    border: 2px solid #000;
+    text-decoration: none;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.pulsantemenu:hover {
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+}
+
+
+/* SEZIONE BREADCRUMB */
+
+#breadcrumb {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    width: 100%;
+    padding: 0.6em;
+    padding-left: 1em;
+    font-size: 1.2em;
+    border-bottom: 4px solid var(--maincolor);
+    border-top: 4px solid var(--maincolor);
+}
+#breadcrumb :visited{
+    color: var(--visitedcolor);
+}
+
+/* SEZIONE CONTENUTO */
+
+main{
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    padding: 2em;
+    line-height: 1.5em;
+    min-height: 70vh;
+}
+
+#homepage h2, #about h2, #account h2, #prenotazione h2, #sedi h2, #paginaNews h2, #condizioni h2, #dashboard h2, #confermaPrenotazione h2, #confermaNews h2, #notAuthorized h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+}
+
+#introHomepage p{
+    margin: 1em 1.5em;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+#punti-di-forza {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+#punti-di-forza article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--bordercolor);
+    padding-top: 1em;
+}
+#punti-di-forza article div:not(.img) {
+    flex: 1;
+    order: 2;
+    margin: 0 1em;
+}
+#punti-di-forza h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em 0;
+    color: var(--txtcolor);
+}
+#punti-di-forza h4 {
+    font-size: 1.6em;
+    margin: 0.5em 1em;
+    color: var(--txtcolor);
+}
+#punti-di-forza p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    text-align: left;
+    margin: 0em 1.3em;
+}
+#punti-di-forza .img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    height: 200px;
+    margin: 0 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#punti-di-forza .spalle {
+    background-image: url(./../images/spalle.webp);
+    order: 1;
+}
+#punti-di-forza .bacino {
+    background-image: url(./../images/bacino.webp);
+    order: 2;
+}
+#punti-di-forza .schiena {
+    background-image: url(./../images/schiena.webp);
+    order: 1;
+}
+#punti-di-forza .gomito {
+    background-image: url(./../images/gomito.webp);
+    order: 2;
+}
+
+/* PAGINA SEDI */
+
+#sedi main p{
+    margin: 1em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.immaginisedi {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5em; 
+    padding: 2em;
+}
+.immaginisedi img {
+    width: 250px;
+    height: 150px;
+    border-radius: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.containersedi{
+    margin: 2em;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.sede{
+    flex: 1 1 400px;
+    box-sizing: border-box;
+    padding: 1em 4em 4em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: auto;
+    text-align: center;
+    min-width: 400px; 
+    max-width: 100%;
+}
+.sede h3 {    
+    margin: 0.5em;
+}
+.sede iframe {
+    width: 100%;
+    height: 40%;
+}
+.sede ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sede a {
+    color: var(--linkcolor);
+}
+.sede a:visited {
+    color: var(--visitedcolor);
+}
+
+
+/* PAGINA ABOUT */
+
+#about img {    
+    margin-right:1em;
+    max-width: 24em;
+    border-radius: 5%;
+    object-fit:scale-down;
+}
+.biografia{
+    color: var(--txtcolor);
+    display:flex;
+    flex-direction: row;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    padding: 1em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#about h3 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+}
+.timeline{
+    list-style: none;
+    max-width: 90%;
+    max-height: 20px;
+    text-align: justify;
+    margin: 5em auto;
+	background: linear-gradient(to bottom, #FFF 0%, #FFF 45%, var(--visitedcolor) 51%, #FFF 57%, #FFF 100%);
+}
+.timeline:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+}
+.timeline li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: var(--visitedcolor);
+	text-align: center;
+	line-height: 1.2em;
+	position: relative;
+	border-radius: 50%;
+}
+.timeline li:before {
+	display: inline-block;
+	content: attr(data-time);
+	font-size: 2em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.timeline li:nth-child(odd):before {
+	top: -40px;
+}
+.timeline li:nth-child(even):before {
+	bottom: -40px;
+}
+.timeline li:after {
+	display: inline-block;
+	content: attr(data-text);
+	font-size: 1em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.timeline li:nth-child(odd):after {
+	bottom: 0;
+	margin-bottom: -10px;
+	transform: translate(-50%, 100%);
+}
+.timeline li:nth-child(even):after {
+	top: 0;
+	margin-top: -10px;
+	transform: translate(-50%, -100%);
+}
+
+
+/* SEZIONE NEWS (homepage) */
+
+
+#news h3 {
+    font-size: 1.8em;
+    text-align: center;
+    width: 100%;
+    padding: 0.4em 0 0.2em;
+}
+#news {
+    margin: 1em; 
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    flex: 1 1;
+    border: 1px solid var(--bordercolor); 
+    border-radius: 0.5em; 
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#news>a{
+    display: inline-block;
+    padding: 0.7em 2em;
+    background-color: var(--buttoncolor);
+    color: var(--txtcolor);
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.boxNews{
+    display: inline-block;
+    width: 30%;
+    margin: 0 1%;
+    vertical-align: top;
+    padding: 20px;
+    border: 2px solid var(--bordercolor);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boxNews h4 {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+}
+#news time {
+    color: var(--bordercolor);
+    font-weight: bold;
+}
+.boxNews p {
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: normal;
+    padding-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.boxNews img{
+    text-align: center;
+    margin: 1em;
+    max-width: 80%;
+    border-radius: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boxNews a {
+    align-self: flex-end;
+    background-color: var(--buttoncolor);
+    color: var(--txtcolor);
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+#news a:hover {
+    background-color: var(--bgcolor);
+}
+.notizia:target{
+    padding-top: 9em;
+    margin-top: -9em;
+}
+
+/* PAGINA 404 e 500*/
+#error-message {
+    margin: 2em auto;
+    padding: 1em;
+    text-align: center;
+    width: 60%;
+}
+#error-message h2 {
+    margin: 1em;
+    line-height: 1.5em;
+    padding: 0.5em;
+}
+#error-message p {
+    margin-bottom: 1em;
+}
+#error-message img {
+    max-width: 80%; 
+}
+
+/* PAGINA TERMINI E CONDIZIONI */
+
+#condizioni main h3{
+    font-size: 1.4em;
+    margin: 1em;
+}
+#condizioni main p{
+    margin: 1em;
+}
+
+/* SEZIONE FOOTER */
+
+footer{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    text-align: center;
+    padding: 1em 0.4em;
+    border-top: 4px solid var(--maincolor);
+    font-weight: bold;
+}
+
+footer>p{
+    display: inline;
+    font-size: 0.8em;
+    font-style: italic;
+}
+.imgValidCode{
+    vertical-align: middle;
+}
+
+.colonne {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+}
+.colonne div {
+    color: var(--txtcolor);
+    flex: 1;
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+}
+.colonne ul {
+    list-style-type: none;
+    padding: 0;
+}
+.colonne a {
+    color: var(--linkcolor);
+}
+.colonne a:visited {
+    color: var(--visitedcolor);
+}
+.logo {
+    height: 4em;
+    width: auto;
+    background-image: url(./../images/sm_logotipo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* PAGINA PRENOTAZIONE */
+
+#prenotazione main>p{
+    text-align: center;
+}
+
+
+#prenotazioneForm, .newsForm {
+    width: 50%;
+    min-width: 30em;
+    margin: 2em auto;
+    padding: 2em 2em 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#prenotazioneForm fieldset, .newsForm fieldset {
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+}
+
+#prenotazioneForm legend, .newsForm legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    padding: 0 0.5em;
+}
+
+#prenotazioneForm ul, .newsForm ul {
+    list-style-type: none;
+}
+
+#prenotazioneForm ul li, .newsForm ul li {
+    margin: 0 auto;
+}
+
+#prenotazioneForm label, .newsForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.3em;
+    margin-left: 4%;
+}
+
+#prenotazioneForm input, #prenotazioneForm textarea, .newsForm input, .newsForm textarea {
+    display: block;
+    width: 90%;
+    margin: 0.1em auto 1em;
+    padding: 0.5em;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+}
+
+#prenotazioneForm input:read-only {
+    background-color: #f0f0f0; /* Colore di sfondo desiderato */
+}
+
+#prenotazioneForm select {
+    display: block;
+    background-color: var(--bgcolor);
+    width: 92.5%;
+    margin: 0.1em auto 1em;
+    padding: 0.5em;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+}
+
+#prenotazioneForm input::placeholder, #prenotazioneForm textarea::placeholder {
+    color: var(--bordercolor);
+}
+
+#prenotazioneForm textarea, .newsForm textarea{
+    height: 7em;
+    resize: vertical;
+}
+
+.newsForm input, .newsForm textarea {
+    margin-bottom: 3em;
+}
+
+#prenotazioneForm #orari {
+    margin: 0.5em 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+    gap: 1em;
+}
+#prenotazioneForm #orari button {
+    background-color: var(--buttoncolor);
+    font-weight: normal;
+    padding: 0.3em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+#prenotazioneForm #orari .selected{
+    padding: 0.25em;
+    font-weight: bold;
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+    border: 2px solid var(--maincolor);
+    cursor: default;
+}
+#prenotazioneForm #orari button:hover {
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+}
+
+.requiredField::after {
+    content: " *";
+    color: red;
+}
+.optionalField::after {
+    font-weight: lighter;
+    font-style: italic;
+    content: " (facoltativo)";
+    font-size: 0.8em;
+}
+
+#prenotazioneForm input[type="submit"], .newsForm input[type="submit"] {
+    width: auto;
+    background-color: var(--buttoncolor);
+    color: var(--txtcolor);
+    padding: 0.6em 1.5em;
+    margin: 1em auto 0.5em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+
+#prenotazioneForm input[type="submit"]:hover, .newsForm input[type="submit"]:hover {
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+}
+
+#prenotazioneForm>p {
+    text-align: center;
+}
+
+#prenotazioneForm .error {
+    color:red;
+    text-align: center;
+    font-size:0.8em;
+    margin-top:0.5em;
+}
+
+/* PAGINE CONFERMA */
+
+#confermaPrenotazione main p, #confermaNews main p, #notAuthorized main p {
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+#confermaPrenotazione #account #registrazione {
+    padding-bottom: 5em;
+}
+
+
+/* PAGINA NEWS */
+
+.notizia {
+    display: block;
+    text-align: left;
+    margin: 2em 0em;
+    border-bottom: 1px solid var(--bordercolor);
+    padding-bottom: 2em;
+}
+.notizia h3 {
+    text-align: left;
+    font-size: 1.8em;
+    margin: 0.5em 0.8em;
+    color: var(--txtcolor);
+}
+.notizia h3 time{
+    font-size: 0.8em;
+    color: var(--maincolor);
+}
+.notizia p {
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0em 1.2em;
+    line-height: 1.5em;
+}
+
+#paginaNews section button{
+    margin: 0.5em 0 0 1.5em;
+    background-color: var(--bgcolor);
+    cursor: pointer;
+    padding: 0.5em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+#paginaNews section .delete-btn:hover {
+    background-color: #F84949;
+    transition: background-color 0.3s;
+}
+#paginaNews section .edit-btn:hover {
+    background-color: #E8F301;
+    transition: background-color 0.3s;
+}
+#paginaNews section .add-btn:hover {
+    background-color: #29F867;
+    transition: background-color 0.3s;
+}
+
+/* PAGINA ACCOUNT */
+
+#login, #registrazione {
+    width: 50%;
+    min-width: 20em;
+    margin: 3em auto;
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#login h3, #registrazione h3 {
+    font-size: 1.7em;
+    padding: 0.2em 0em;
+}
+#login legend, #registrazione legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    padding: 0 0.5em;
+}
+
+#login form fieldset, #registrazione form fieldset {
+    width: 60%;
+    min-width: 16em;
+    margin: 1em auto 1.5em;
+    padding: 1em 2em 0em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#login form input, #registrazione form input {
+    width: 90%;
+    padding: 0.8em;
+    margin: 0.3em auto 1.5em;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#login form, #registrazione form {
+    text-align: center;
+}
+#login form label, #registrazione form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+#login input[type="submit"], #registrazione input[type="submit"] {
+    width: auto;
+    background-color: var(--buttoncolor);
+    cursor: pointer;
+    padding: 0.6em 1.5em;
+    margin: 1em 0.5em 1.5em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#login input[type="submit"]:hover , #registrazione input[type="submit"]:hover {
+    background-color: var(--bgcolor);
+    transition: background-color 0.3s;
+}
+
+#go_reg, #go_log {
+    color: var(--linkcolor);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#login input.invalid, #registrazione input.invalid, #prenotazioneForm .invalid{
+    border-color:red;
+}
+
+#sedeHint {
+    position: absolute;
+    text-indent: -9999em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* PAGINA DASHBOARD */
+
+#dashboard main div {
+    max-width: 75%;
+    margin: 1em auto;
+    border: 1px solid var(--bordercolor);
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: var(--bgcolor);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#prenotazioni caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 0 0.8em;
+}
+
+#prenotazioni {
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+  
+#prenotazioni th {
+    background-color: var(--buttoncolor);
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid var(--bordercolor);
+}
+  
+#prenotazioni td {
+    padding: 0.7em;
+    text-align: center;
+    border: 1px solid var(--bordercolor);
+}
+
+#prenotazioni td button{
+    background-color: var(--bgcolor);
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 0.2em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+#prenotazioni td button:hover, #prenotazioni td .reject-btn:hover, #dashboard main form input:hover {
+    background-color: #F84949;
+    transition: background-color 0.3s;
+}
+#prenotazioni td .accept-btn:hover {
+    background-color: #29F867;
+    transition: background-color 0.3s;
+}
+
+#dashboard main form {
+    margin: 2em auto 1em;
+    text-align: center;
+}
+
+#dashboard main form input {
+    background-color: var(--buttoncolor);
+    cursor: pointer;
+    padding: 0.5em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#prenotazioni tr, #prenotazioni th, #prenotazioni td{
+    display: block;
+}
+
+#prenotazioni thead, #prenotazioni td:empty{
+    display: none;
+}
+
+#prenotazioni tr>td:first-child {
+    background-color: #b8d3f4;
+    font-weight: bold;
+}
+
+#prenotazioni td[data-title]:before {
+    content:attr(data-title) ":\00A0";
+    font-weight: bold;
+}
+
+#prenotazioni td[scope="row"]:before {
+    content: "Numero prenotazione: "
+}
